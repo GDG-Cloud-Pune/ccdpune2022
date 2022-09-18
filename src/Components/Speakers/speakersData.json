@@ -127,5 +127,75 @@
     ],
     "questionAnswers": [],
     "categories": []
+  },
+  {
+    "id": "f85512c0-af46-4083-b0bd-c5b8841399e9",
+    "firstName": "Jayesh",
+    "lastName": "Ahire",
+    "fullName": "Jayesh Ahire",
+    "bio": "Jayesh Ahire is the Founding Product Manager at TraceableAI where he runs API Security initiative. He is the AWS ML Hero, Twilio champion, and maintainer of varioud OSS Projects like OWASP crAPI, Hypertrace. He is the Organizer of API Security Global Community, AWS UG, Elastic UG, TensorFlow UG, and many other communities in India. His research interest involved Distributed neural computers and Defi. In his free time, he likes to read and he is learning to play the piano. ",
+    "tagLine": "Founding member of Product Management, TraceableAI",
+    "profilePicture": "https://sessionize.com/image/086d-400o400o2-c0-af46-4083-b0bd-c5b8841399e9.b0fe85e5-4149-4c5c-8c0a-000a5423565a.jpg",
+    "sessions": [
+      {
+        "id": 377608,
+        "name": "Do the Right thing, shift Left!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/jayesh_ahire1",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://linkedin.com/in/jayesh-ahire",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://dev.to/jbahire",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/jayesh",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "5e7de5da-81c1-4cf2-aefa-a5fc68a54b6a",
+    "firstName": "Murari",
+    "lastName": "Ramuka",
+    "fullName": "Murari Ramuka",
+    "bio": "Murari has extensively worked on Traditional and Modern data platforms having deep experience in Data Management, Data Architecture, Data Engineering, Data Science, Data Governance etc. In his past experiences at Microsoft, KPMG and HSBC, he led cloud data strategy/ implementation for multiple enterprise customers.\r\n\r\nHe has also authored a book on Data Analytics with Google Cloud Platform which is available on Amazon.\r\n\r\n I  love spreading knowledge among the community and am part of the Mentor for change program run by Niti Ayog (Govt of India).",
+    "tagLine": "Google, Data Analytics Specialist",
+    "profilePicture": "https://sessionize.com/image/b8f2-400o400o2-SXjSV68887FGF9b7oRfre.jpg",
+    "sessions": [
+      {
+        "id": 379695,
+        "name": "Discovering Data Values using Google Cloud Platform"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/murari-ramuka-98a440a/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/murari-ramuka",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
   }
 ]
