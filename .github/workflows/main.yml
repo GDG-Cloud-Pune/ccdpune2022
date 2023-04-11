@@ -5,6 +5,9 @@ on:
     branches: [ main, actions-workflow ]
   workflow_dispatch:
 
+env:
+  CI: ""
+
 jobs:
   build:
     name: Build & Deploy
