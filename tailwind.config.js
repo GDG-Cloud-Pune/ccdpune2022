@@ -1,6 +1,14 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
+    boxShadow: {
+      gold: '0 5px 15px rgba(255, 188, 5, 1)',
+      bronze: '0 5px 15px rgba(168, 121, 0, 1)',
+      darksilver: '0 5px 15px rgba(80, 80, 80, 1)',
+      platinum: '0 5px 15px rgba(150, 150, 150, 1)',
+
+
+    },
     extend: {
       colors: {
         white: '#ffffff',

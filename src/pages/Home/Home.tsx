@@ -18,9 +18,11 @@ const Home = () => {
       <Speakers />
       {/* <Team /> */}
       <Coc />
-      <FAQ />
       <Sponsors />
-      {/* <Partners />   */}
+      <Partners />  
+
+      <FAQ />
+
       {/* <ComingSoon/> */}
     </>
   )

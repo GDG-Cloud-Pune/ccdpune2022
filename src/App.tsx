@@ -95,9 +95,9 @@ const Page = () => {
           </div>
         </>
       )}
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Navigation />
-      </BrowserRouter> */}
+      </BrowserRouter>
     </>
   )
 }
