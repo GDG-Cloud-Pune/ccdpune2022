@@ -6,6 +6,7 @@ const Speakers = () => {
   const [speakersDetails, setSpeakersDetails] = useState<any[]>([])
   const [showModal, setShowModal] = useState(false)
   const [modalData, setModalData]: any = useState([])
+  const [showMore, setShowMore] = useState(false) // new state variable for show more/less functionality
 
   useEffect(() => {
     setSpeakersDetails(speakersData)
@@ -22,13 +23,23 @@ const Speakers = () => {
       .catch((error) => console.log(error))
   }, [])*/
 
+  const handleShowMore = () => {
+    setShowMore(true)
+  }
+
+  const handleShowLess = () => {
+    setShowMore(false)
+  }
+
+  const speakersToRender = showMore ? speakersDetails : speakersDetails.slice(0, 6) // limit speakers to show based on showMore state
+
   return (
     <>
-      <div className="flex justify-center items-center flex-col px-5 pt-5">
-        <div className="text-2xl lg:text-3xl font-normal text-g-gray-8">
-          CCD Pune 2022 Speakers
+      <div className="flex justify-center items-center gap-5 flex-col px-5 pt-10 mb-5">
+        <div className="text-3xl lg:text-5xl font-extrabold ">
+          Speakers
         </div>
-        <div className="text-base max-w-2xl w-fit text-center font-light text-g-gray-5 mt-2">
+        <div className="text-base text-lg max-w-2xl w-fit text-center font-semibold text-g-gray-6 mt-2">
           Hear from the Professionals who are building the future of cloud. Our
           speakers are influential folks & allies who have been associated with
           communities within their organisations, cities, country and beyond.
@@ -36,26 +47,25 @@ const Speakers = () => {
       </div>
       <div
         className="grid 
-        sm:grid-cols-1 md:grid-cols-3 grid-flow-row place-items-center p-5 lg:grid-cols-4  gap-4 max-w-7xl mx-auto "
+        sm:grid-cols-1 md:grid-cols-2 grid-flow-row place-items-center p-5 lg:grid-cols-3  gap-4 max-w-7xl mx-auto "
         style={{ gridAutoRows: '1fr' }}
         id="speakers-grid"
       >
-        {speakersDetails.map((speaker, id) => (
+        {speakersToRender.map((speaker, id) => (
           <div
             key={id}
-            className="flex w-full h-full flex-col rounded-2xl items-center border border-g-gray-8 p-4 transform hover:-translate-y-2 hover:shadow-xl transition duration-300"
+            className="flex w-full h-full flex-col rounded-2xl items-center shadow-lg p-4 transform hover:-translate-y-2 hover:shadow-xl transition duration-300" 
+            style={{ boxShadow: "rgba(0, 0, 0, 0.2) 0px 4px 8px 0px" }}
+            
             onClick={() => {
               setModalData(speaker)
               setShowModal(true)
             }}
           >
+            {/* box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px */}
             <img
-              style={{
-                borderStyle: 'solid',
-                borderWidth: '4px',
-                borderColor: '#4C8EF5'
-              }}
-              className="inline-block h-36 w-36 rounded-full ring-2 ring-white"
+              
+              className=" h-36 w-36 rounded-full ring-2 ring-white"
               src={speaker.profilePicture}
               alt=""
             />
@@ -68,6 +78,45 @@ const Speakers = () => {
             <Socials links={[...speaker?.links]} />
           </div>
         ))}
+     
+   
+      </div>
+      {speakersDetails.length > 6 && !showMore && (
+  <div
+    className="bg-g-blue-6 text-white font-semibold rounded-full py-2 px-4 my-5 hover:bg-g-blue-7 transition duration-200 rounded-full"
+    style={{
+      boxShadow: "rgba(0, 0, 0, 0.2) 0px 4px 8px 0px",
+      width: "200px",
+      margin: "0 auto",
+      marginBottom: "25px",
+      borderRadius: "999px",
+    }}
+    onClick={handleShowMore}
+  >
+    <div className="text-lg font-light mt-2 text-center text-sky-400">
+      Show More
+    </div>
+  </div>
+)}
+
+{showMore && (
+  <div
+    className="bg-g-blue-6 text-white font-semibold rounded-full py-2 px-4 my-5 hover:bg-g-blue-7 transition duration-200 rounded-full"
+    style={{ boxShadow: "rgba(0, 0, 0, 0.2) 0px 4px 8px 0px",
+    width: "200px",
+    margin: "0 auto",
+    marginBottom: "25px",
+    borderRadius: "999px" }}
+    onClick={handleShowLess}
+  >
+    <div className="text-lg font-light mt-2 text-center text-sky-400">
+      Show Less
+    </div>
+  </div>
+)}
+
+
+
         {showModal ? (
           <>
             <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
@@ -92,7 +141,7 @@ const Speakers = () => {
                   </div>
 
                   <div className="relative px-6 py-2 flex-auto">
-                    <p className="my-2 text-g-gray-5 font-light text-base leading-relaxed">
+                    <p className="my-2 text-g-gray-6  text-base leading-relaxed">
                       {modalData.bio}
                     </p>
                     <div className="pt-10">
@@ -119,7 +168,7 @@ const Speakers = () => {
             <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
           </>
         ) : null}
-      </div>
+     
     </>
   )
 }

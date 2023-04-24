@@ -23,6 +23,12 @@ body {
       
     }
   }
+  @media (max-width: 640px) {
+    .show-more-btn {
+      display: block;
+    }
+  }
+
   .schedule-container{
     position: relative; 
     overflow: hidden;
