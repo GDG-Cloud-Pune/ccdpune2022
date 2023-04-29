@@ -34,8 +34,7 @@ module.exports = {
         'g-gray-6': '#808080',
         'g-gray-7': '#666666',
         'g-gray-8': '#4D4D4D',
-        'g-gray-9': '#333333',
-        'theme-blue-color': '#007BFC'
+        'g-gray-9': '#333333'
       }
     }
   },
